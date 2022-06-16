@@ -13,6 +13,14 @@ app.use(express.static(path.resolve(__dirname, "./client/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
+app.use(
+  cors({
+    origin: ["https://sweet-mousse-0bd4dd.netlify.app"],
+    methods: ["GET", "POST", "DELETE"],
+    credentials: true,
+    origin: true,
+  })
+);
 
 const PORT = process.env.PORT || 3001;
 
