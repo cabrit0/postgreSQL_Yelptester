@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://yelptester.herokuapp.com/api/v1/restaurants",
+  baseURL: "http://localhost:3006/api/v1/restaurants",
 });
