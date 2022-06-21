@@ -17,12 +17,14 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+
 const PORT = process.env.PORT || 3001;
 //app.use(express.static(path.join("./client/build")));
 
 if (process.env.NODE_ENV === "production") {
   // server static content
   app.use(express.static(path.join(__dirname, "client/build")));
+  
 }
 
 //route GET all restaurants
