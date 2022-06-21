@@ -17,6 +17,7 @@ const productionConfig = {
 const pool = new Pool(
   process.env.NODE_ENV === "production" ? productionConfig : devConfig
 );
+//back
 
 module.exports = {
   query: (text, params) => pool.query(text, params),
