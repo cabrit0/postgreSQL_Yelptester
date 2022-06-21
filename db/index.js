@@ -15,7 +15,6 @@ const productionConfig = {
   ssl: {
     rejectUnauthorized: false
   }
-  pool.connect();
 };
 
 const pool = new Pool(
